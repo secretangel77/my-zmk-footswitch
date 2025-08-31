@@ -1,3 +1,5 @@
+#include <dt-bindings/zmk/power.h>
+
 / {
     chosen {
         zmk,kscan = &kscan0;
