@@ -3,13 +3,30 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
+    behaviors {
+        mode_toggle: mode_toggle {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MODE_TOGGLE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&to 0>, <&to 1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         
-        default_layer {
+        mouse_layer {
             bindings = <
                 &mkp LCLK      &mkp RCLK
+                &mode_toggle   &none
+            >;
+        };
+        
+        keyboard_layer {
+            bindings = <
                 &kp A          &kp D
+                &mode_toggle   &none
             >;
         };
     };
