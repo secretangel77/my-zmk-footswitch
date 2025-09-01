@@ -5,13 +5,12 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-    behaviors {
-        td_d: tap_dance_d {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_D";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp D>, <&to 2>;
+    combos {
+        compatible = "zmk,combos";
+        combo_settings {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&to 2>;
         };
     };
 
@@ -21,14 +20,14 @@
         mouse_layer {
             bindings = <
                 &mkp LCLK      &mkp RCLK
-                &to 1          &td_d
+                &to 1          &kp D
             >;
         };
 
         kb_layer {
             bindings = <
-                &kp A          &td_d
-                &to 0          &none
+                &kp A          &kp D
+                &to 0          &kp D
             >;
         };
 
