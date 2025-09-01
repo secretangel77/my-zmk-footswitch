@@ -11,11 +11,11 @@
         input-gpios =
             <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // 풋스위치 1
             <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // 풋스위치 2
-            <&gpio0 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // 모드 스위치 (슬라이드 스위치)
-            <&gpio0 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // 설정용 (D키)
+            <&gpio0 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // 슬라이드 스위치
+            <&gpio0 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // 설정 키
     };
 
-    // 배터리 모니터링 (2단계에서 추가한 부분)
+    // 배터리 모니터링
     vbatt: vbatt {
         compatible = "zmk,battery-voltage-divider";
         io-channels = <&adc 2>;
@@ -23,4 +23,3 @@
         full-ohms = <(2000000 + 806000)>;
     };
 };
-
