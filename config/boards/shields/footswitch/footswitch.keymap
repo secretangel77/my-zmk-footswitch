@@ -5,20 +5,30 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    behaviors {
+        td_d: tap_dance_d {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_D";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp D>, <&to 2>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         
         mouse_layer {
             bindings = <
                 &mkp LCLK      &mkp RCLK
-                &to 1          &kp D
+                &to 1          &td_d
             >;
         };
 
         kb_layer {
             bindings = <
-                &kp A          &kp D
-                &to 0          &kp D
+                &kp A          &td_d
+                &to 0          &none
             >;
         };
 
