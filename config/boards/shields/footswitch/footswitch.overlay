@@ -11,22 +11,16 @@
         input-gpios =
             <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // 풋스위치 1
             <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // 풋스위치 2
-            // 기존 P0.7, P0.8은 풋스위치 1,2 로 대체되므로 사용하지 않음
-            <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // <-- 슬라이드 스위치: 마우스 모드 (좌측)
-            <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // <-- 슬라이드 스위치: 키보드 모드 (우측)
+            <&gpio0 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // 모드 스위치 (슬라이드 스위치)
+            <&gpio0 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // 설정용 (D키)
     };
 
-    power_state: power_state { // 기존 저전력 설정
-        compatible = "zmk,power-state-control";
-        control-gpios = <&gpio0 5 GPIO_ACTIVE_HIGH>,
-                        <&gpio0 6 GPIO_ACTIVE_HIGH>,
-                        <&gpio0 9 GPIO_ACTIVE_HIGH>,
-                        <&gpio0 10 GPIO_ACTIVE_HIGH>; // 슬라이드 스위치 핀도 추가
-        states = <ZMK_POWER_STATE_DEEP_SLEEP>;
+    // 배터리 모니터링 (2단계에서 추가한 부분)
+    vbatt: vbatt {
+        compatible = "zmk,battery-voltage-divider";
+        io-channels = <&adc 2>;
+        output-ohms = <2000000>;
+        full-ohms = <(2000000 + 806000)>;
     };
-};
-
-&gpio0 { // 기존 저전력 설정
-    low-power-enable;
 };
 
