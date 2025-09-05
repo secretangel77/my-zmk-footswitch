@@ -12,4 +12,12 @@
             <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // 키보드 A키
             <&gpio0 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // 키보드 D키
     };
+
+    // 배터리 모니터링 추가
+    vbatt: vbatt {
+        compatible = "zmk,battery-voltage-divider";
+        io-channels = <&adc 2>;
+        output-ohms = <2000000>;
+        full-ohms = <(2000000 + 806000)>;
+    };
 };
