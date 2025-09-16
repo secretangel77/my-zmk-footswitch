@@ -27,8 +27,8 @@
 &i2c0 {
     compatible = "nordic,nrf-twi";
     status = "okay";
-//    sda-pin = <5>;  // P0.05 핀 (I2C 데이터)
-//    scl-pin = <7>;  // P0.07 핀 (I2C 클럭)
+    sda-pin = <5>;  // P0.05 핀 (I2C 데이터)
+    scl-pin = <7>;  // P0.07 핀 (I2C 클럭)
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
