@@ -26,9 +26,7 @@
 
 &i2c0 {
     compatible = "nordic,nrf-twi";
-    status = "okay";
-    sda-gpios = <&gpio0 5 GPIO_ACTIVE_HIGH>; // P0.05 핀 (I2C 데이터)
-    scl-gpios = <&gpio0 7 GPIO_ACTIVE_HIGH>; // P0.07 핀 (I2C 클럭)
+    status = "okay";)
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
