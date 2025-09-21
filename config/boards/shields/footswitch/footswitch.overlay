@@ -2,7 +2,7 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,battery = &vbatt;
-        zmk,display = &ssd1306;
+        zmk,display = &oled;
     };
 
     kscan0: kscan {
@@ -26,21 +26,21 @@
 };
 
 &i2c0 {
+    compatible = "nordic,nrf-twi";
     status = "okay";
 
-    ssd1306: ssd1306@3c {
+    oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;              // 주소 0x3C
+        reg = <0x3c>;
         width = <128>;
-        height = <32>;             // 128x32면 32로
+        height = <32>;
         segment-offset = <0>;
         page-offset = <0>;
         display-offset = <0>;
-        multiplex-ratio = <63>;    // 64-1. 32라인이면 31
-        prechargep = <0xF1>;
-        vcomh = <0x40>;
-        segremap = <1>;
-        com-invdir = <1>;
-        com-seq = <0>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        com-sequential;
+        prechargep = <0x22>;
     };
 };
