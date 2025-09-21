@@ -26,8 +26,6 @@
     };
 };
 
-/delete-node/ &oled;
-
 &i2c0 {
     compatible = "nordic,nrf-twi";
     status = "okay";
