@@ -26,6 +26,8 @@
     };
 };
 
+/delete-node/ &oled;
+
 &i2c0 {
     compatible = "nordic,nrf-twi";
     status = "okay";
@@ -42,6 +44,7 @@
         segment-remap;
         com-invdir;
         com-sequential;
+        inversion-on;
         prechargep = <0x22>;
     };
 };
