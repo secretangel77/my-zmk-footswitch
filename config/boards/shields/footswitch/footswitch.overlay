@@ -42,6 +42,5 @@
         segremap = <1>;
         com-invdir = <1>;
         com-seq = <0>;
-        reset-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; // 리셋핀 없으면 이 줄 삭제
     };
 };
