@@ -23,6 +23,8 @@
         output-ohms = <2000000>;
         full-ohms = <(2000000 +806000)>;
     };
+};
+
 &i2c0 {
     status = "okay";
 
@@ -42,5 +44,4 @@
         com-seq = <0>;
         reset-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; // 리셋핀 없으면 이 줄 삭제
     };
-};
 };
