@@ -2,7 +2,6 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,battery = &vbatt;
-        zmk,display = &oled;
     };
 
     kscan0: kscan {
@@ -22,25 +21,5 @@
         io-channels = <&adc 2>;
         output-ohms = <2000000>;
         full-ohms = <(2000000 +806000)>;
-    };
-};
-
-&i2c0 {
-    compatible = "nordic,nrf-twi";
-    status = "okay";
-
-    oled: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
-        width = <128>;
-        height = <32>;
-        segment-offset = <0>;
-        page-offset = <0>;
-        display-offset = <0>;
-        multiplex-ratio = <31>;
-        segment-remap;
-        com-invdir;
-        com-sequential;
-        prechargep = <0x22>;
     };
 };
