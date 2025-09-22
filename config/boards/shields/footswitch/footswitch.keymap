@@ -87,7 +87,7 @@
 
         // --- 0. 기본 마우스 모드 (Layer 0) ---
         default_layer {
-            display-name = "Mouse:[L][R]";
+            display-name = "M:[L]-[R]";
             bindings = <
                 &mkp LCLK           // 풋스위치 1: 좌클릭
                 &mkp RCLK           // 풋스위치 2: 우클릭
@@ -98,7 +98,7 @@
 
         // --- 1. 반전 마우스 모드 (Layer 1) ---
         mouse_layer_1 {
-            display-name = "Mouse:[R]-[L]";
+            display-name = "M:[R]-[L]";
             bindings = <
                 &mkp RCLK           // 풋스위치 1: 우클릭
                 &mkp LCLK           // 풋스위치 2: 좌클릭
@@ -109,7 +109,7 @@
 
         // --- 2. 중간+좌 마우스 모드 (Layer 2) ---
         mouse_layer_2 {
-            display-name = "Mouse:[M]-[L]";
+            display-name = "M:[M]-[L]";
             bindings = <
                 &mkp MCLK           // 풋스위치 1: 중간클릭
                 &mkp LCLK           // 풋스위치 2: 좌클릭
@@ -120,7 +120,7 @@
 
         // --- 3. 좌+중간 마우스 모드 (Layer 3) ---
         mouse_layer_3 {
-            display-name = "Mouse:[L]-[M]";
+            display-name = "M:[L]-[M]";
             bindings = <
                 &mkp LCLK           // 풋스위치 1: 좌클릭
                 &mkp MCLK           // 풋스위치 2: 중간클릭
@@ -131,7 +131,7 @@
 
         // --- 4. 좌+중간 마우스 모드 (Layer 4) ---
         mouse_layer_4 {
-            display-name = "Mouse:[R]-[M]";
+            display-name = "M:[R]-[M]";
             bindings = <
                 &mkp RCLK           // 풋스위치 1: 우클릭
                 &mkp MCLK           // 풋스위치 2: 중간클릭
@@ -142,7 +142,7 @@
 
         // --- 5. 좌+중간 마우스 모드 (Layer 5) ---
         mouse_layer_5 {
-            display-name = "Mouse:[M]-[R]";
+            display-name = "M:[M]-[R]";
             bindings = <
                 &mkp MCLK           // 풋스위치 1: 중간클릭
                 &mkp RCLK           // 풋스위치 2: 우클릭
@@ -153,7 +153,7 @@
 
         // --- 6. 기본 키보드 모드 (Layer 6) ---
         keyboard_base {
-            display-name = "Keybd:[F]-[C]";
+            display-name = "K:[F]-[C]";
             bindings = <
                 &kp F               // 풋스위치 1: F -> 데뮬슈터: Right
                 &kp C               // 풋스위치 2: C -> 데뮬슈터: middle
@@ -164,7 +164,7 @@
  
         // --- 7. Q, W 키보드 모드 (Layer 7) ---
         keyboard_layer_1 {
-            display-name = "Keybd:[C]-[F]";
+            display-name = "K:[C]-[F]";
             bindings = <
                 &kp C               // 풋스위치 1: C -> 데뮬슈터: middle
                 &kp F               // 풋스위치 2: F -> 데뮬슈터: Right
@@ -175,7 +175,7 @@
 
         // --- 8. T, Y 키보드 모드 (Layer 8) ---
         keyboard_layer_2 {
-            display-name = "Keybd:[T]-[C]";
+            display-name = "K:[T]-[C]";
             bindings = <
                 &kp T               // 풋스위치 1: T -> 데뮬슈터: left
                 &kp C               // 풋스위치 2: C -> 데뮬슈터: middle
@@ -186,7 +186,7 @@
 
         // --- 9. Z, X 키보드 모드 (Layer 9) ---
         keyboard_layer_3 {
-            display-name = "Keybd:[C]-[T]";
+            display-name = "K:[C]-[T]";
             bindings = <
                 &kp C               // 풋스위치 1: C -> 데뮬슈터: middle
                 &kp T               // 풋스위치 2: T -> 데뮬슈터: left
@@ -197,7 +197,7 @@
 
         // --- 10. Z, X 키보드 모드 (Layer 10) ---
         keyboard_layer_4 {
-            display-name = "Keybd:[T]-[F]";
+            display-name = "K:[T]-[F]";
             bindings = <
                 &kp T               // 풋스위치 1: T -> 데뮬슈터: left
                 &kp F               // 풋스위치 2: F -> 데뮬슈터: Right
@@ -208,7 +208,7 @@
 
         // --- 11. Z, X 키보드 모드 (Layer 11) ---
         keyboard_layer_5 {
-            display-name = "Keybd:[F]-[T]";
+            display-name = "K:[F]-[T]";
             bindings = <
                 &kp F               // 풋스위치 1: F -> 데뮬슈터: Right
                 &kp T               // 풋스위치 2: T -> 데뮬슈터: left
