@@ -22,17 +22,11 @@
         m10_cycle: m10_cycle { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_tap &to 11>; };
         m11_cycle: m11_cycle { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_tap &to 6>; };
 
-        to_mouse: to_mouse {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &to 6>;  // 6번 레이어로 이동
-        };
-
-        to_keyboard: to_keyboard {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &to 0>;  // 0번 레이어로 이동
-        };
+        // 6번 레이어로 이동
+        to_mouse: to_mouse { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_tap &to 6>; };  
+        
+        // 0번 레이어로 이동
+        to_keyboard: to_keyboard { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&macro_tap &to 0>; };
     }; 
 
     keymap {
